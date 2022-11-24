@@ -116,8 +116,27 @@ if (elementHtmlClear) {
     });
 }
 
+const number1 = elementHtmlResult.value;
+const number2 = elementHtmlResult.value;
+const userInput= '0';
+
+
 if (elementHtmlEqual) {
     elementHtmlEqual.addEventListener('click', (event: MouseEvent) => {
 
+        switch (currentOperator) {
+            case '+' :
+                    elementHtmlResult.value = number1 + number2;
+                break;
+            case '-':
+
+                break;
+            case '*' :
+
+                break;
+            case '/' :
+
+                break;
+        }
     });
 }

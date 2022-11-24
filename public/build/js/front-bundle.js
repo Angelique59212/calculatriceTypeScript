@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n#container {\n  border: 1px solid #9b9696;\n  border-radius: 5px;\n  width: 320px;\n  height: 500px;\n  margin: 2rem auto;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  justify-content: space-around;\n  align-content: space-around;\n  background-color: midnightblue;\n}\n\n.touch {\n  height: 13%;\n  width: 18%;\n  border: 1px solid #9b9696;\n  border-radius: 4px;\n  text-align: center;\n  font-weight: bold;\n}\n\n#containerSecond {\n  width: 90%;\n  height: 13%;\n}\n\n#champ {\n  width: 100%;\n  height: 100%;\n  background-color: dimgray;\n  color: white;\n}\n\n#multiplication, #subtraction, #division, #clear, #equal, #addition {\n  background-color: magenta;\n  height: 100%;\n}\n\n#one, #two, #three, #four, #five, #six, #seven, #height, #nine, #zero {\n  background-color: white;\n  height: 100%;\n}", "",{"version":3,"sources":["webpack://./assets/styles/style.scss"],"names":[],"mappings":"AAEA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AADF;;AAIA;EACE,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,aAAA;EACA,iBAAA;EACA,aAAA;EACA,eAAA;EACA,mBAAA;EACA,6BAAA;EACA,2BAAA;EACA,8BAAA;AADF;;AAIA;EACE,WAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;EACA,kBAAA;EACA,iBAAA;AADF;;AAIA;EACE,UAAA;EACA,WAAA;AADF;;AAIA;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,YAAA;AADF;;AAIA;EACE,yBAAA;EACA,YAAA;AADF;;AAIA;EACE,uBAAA;EACA,YAAA;AADF","sourcesContent":["@use \"./modules/vars\";\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n#container {\n  border: #{vars.$border}px solid #9b9696;\n  border-radius: 5px;\n  width: 320px;\n  height: 500px;\n  margin: 2rem auto;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  justify-content: space-around;\n  align-content: space-around;\n  background-color: midnightblue;\n}\n\n.touch {\n  height: 13%;\n  width: 18%;\n  border: #{vars.$border}px solid #9b9696;\n  border-radius: 4px;\n  text-align: center;\n  font-weight: bold;\n}\n\n#containerSecond {\n  width: 90%;\n  height: 13%;\n}\n\n#champ {\n  width: 100%;\n  height: 100%;\n  background-color: dimgray;\n  color: white;\n}\n\n#multiplication , #subtraction , #division, #clear, #equal , #addition {\n  background-color: magenta;\n  height: 100%;\n}\n\n#one , #two , #three , #four , #five , #six , #seven , #height , #nine , #zero {\n  background-color: white;\n  height: 100%;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n#container {\n  border: 1px solid #9b9696;\n  border-radius: 5px;\n  width: 18vw;\n  height: 53vh;\n  margin: 2rem auto;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  justify-content: space-around;\n  align-content: space-around;\n  background-color: midnightblue;\n}\n\n.touch {\n  height: 13%;\n  width: 18%;\n  border: 1px solid #9b9696;\n  border-radius: 0.25rem;\n  text-align: center;\n  font-weight: bold;\n}\n\n#containerSecond {\n  width: 90%;\n  height: 13%;\n}\n\n#champ {\n  width: 100%;\n  height: 100%;\n  background-color: dimgray;\n  color: white;\n}\n\n#multiplication, #subtraction, #division, #clear, #equal, #addition {\n  background-color: magenta;\n  height: 100%;\n}\n\n#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero {\n  background-color: white;\n  height: 100%;\n}", "",{"version":3,"sources":["webpack://./assets/styles/style.scss"],"names":[],"mappings":"AAEA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AADF;;AAIA;EACE,yBAAA;EACA,kBAAA;EACA,WAAA;EACA,YAAA;EACA,iBAAA;EACA,aAAA;EACA,eAAA;EACA,mBAAA;EACA,6BAAA;EACA,2BAAA;EACA,8BAAA;AADF;;AAIA;EACE,WAAA;EACA,UAAA;EACA,yBAAA;EACA,sBAAA;EACA,kBAAA;EACA,iBAAA;AADF;;AAIA;EACE,UAAA;EACA,WAAA;AADF;;AAIA;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,YAAA;AADF;;AAIA;EACE,yBAAA;EACA,YAAA;AADF;;AAIA;EACE,uBAAA;EACA,YAAA;AADF","sourcesContent":["@use \"./modules/vars\";\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n#container {\n  border: #{vars.$border}px solid #9b9696;\n  border-radius: 5px;\n  width: 18vw;\n  height: 53vh;\n  margin: 2rem auto;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  justify-content: space-around;\n  align-content: space-around;\n  background-color: midnightblue;\n}\n\n.touch {\n  height: 13%;\n  width: 18%;\n  border: #{vars.$border}px solid #9b9696;\n  border-radius: 0.25rem;\n  text-align: center;\n  font-weight: bold;\n}\n\n#containerSecond {\n  width: 90%;\n  height: 13%;\n}\n\n#champ {\n  width: 100%;\n  height: 100%;\n  background-color: dimgray;\n  color: white;\n}\n\n#multiplication , #subtraction , #division, #clear, #equal , #addition {\n  background-color: magenta;\n  height: #{vars.$height};\n}\n\n#one , #two , #three , #four , #five , #six , #seven , #eight , #nine , #zero {\n  background-color: white;\n  height: #{vars.$height};\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -689,8 +689,22 @@ if (elementHtmlClear) {
         written(elementHtmlResult.value = '');
     });
 }
+const number1 = elementHtmlResult.value;
+const number2 = elementHtmlResult.value;
+const userInput = '0';
 if (elementHtmlEqual) {
     elementHtmlEqual.addEventListener('click', (event) => {
+        switch (currentOperator) {
+            case '+':
+                elementHtmlResult.value = number1 + number2;
+                break;
+            case '-':
+                break;
+            case '*':
+                break;
+            case '/':
+                break;
+        }
     });
 }
 

@@ -9,8 +9,8 @@
 #container {
   border: #{vars.$border}px solid #9b9696;
   border-radius: 5px;
-  width: 320px;
-  height: 500px;
+  width: 18vw;
+  height: 53vh;
   margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +24,7 @@
   height: 13%;
   width: 18%;
   border: #{vars.$border}px solid #9b9696;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   text-align: center;
   font-weight: bold;
 }
@@ -43,10 +43,10 @@
 
 #multiplication , #subtraction , #division, #clear, #equal , #addition {
   background-color: magenta;
-  height: 100%;
+  height: #{vars.$height};
 }
 
-#one , #two , #three , #four , #five , #six , #seven , #height , #nine , #zero {
+#one , #two , #three , #four , #five , #six , #seven , #eight , #nine , #zero {
   background-color: white;
-  height: 100%;
+  height: #{vars.$height};
 }
