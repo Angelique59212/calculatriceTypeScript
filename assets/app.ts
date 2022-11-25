@@ -93,7 +93,7 @@ if (elementHtmlClear) {
 
 for (let i = 0; i < elementHtmlOperation.length; i++) {
     elementHtmlOperation[i].addEventListener('click', function() {
-        currentOperator = this.innerHTML;
+        currentOperator = this.innerText;
         numberOne = parseInt(elementHtmlResult.value);
         elementHtmlResult.value = '';
     });
@@ -106,19 +106,15 @@ if (elementHtmlEqual) {
         switch (currentOperator) {
             case '+' :
                 elementHtmlResult.value = (numberOne + numberTwo).toString();
-                console.log(currentOperator);
                 break;
             case '-':
                 elementHtmlResult.value = (numberOne - numberTwo).toString();
-                console.log(currentOperator);
                 break;
             case '*' :
                 elementHtmlResult.value = (numberOne * numberTwo).toString();
-                console.log(currentOperator);
                 break;
             case '/' :
                 elementHtmlResult.value = (numberOne / numberTwo).toString();
-                console.log(currentOperator);
                 break;
             default :
                 alert('Erreur');
