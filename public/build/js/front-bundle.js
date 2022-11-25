@@ -604,13 +604,12 @@ const elementHtmlSix = document.getElementById('six');
 const elementHtmlSeven = document.getElementById('seven');
 const elementHtmlEight = document.getElementById('eight');
 const elementHtmlNine = document.getElementById('nine');
-const elementHtmlAddition = document.getElementById('addition');
-const elementHtmlSubtraction = document.getElementById('subtraction');
-const elementHtmlMultiplication = document.getElementById('multiplication');
-const elementHtmlDivision = document.getElementById('division');
 const elementHtmlClear = document.getElementById('clear');
 const elementHtmlEqual = document.getElementById('equal');
+const elementHtmlOperation = document.getElementsByClassName('button-operation');
 let currentOperator = '=';
+let numberOne;
+let numberTwo;
 function written(number) {
     elementHtmlResult.value += number;
 }
@@ -664,46 +663,41 @@ if (elementHtmlNine) {
         written(elementHtmlNine.innerHTML);
     });
 }
-if (elementHtmlAddition) {
-    elementHtmlAddition.addEventListener('click', (event) => {
-        written('+');
-    });
-}
-if (elementHtmlSubtraction) {
-    elementHtmlSubtraction.addEventListener('click', (event) => {
-        written('-');
-    });
-}
-if (elementHtmlDivision) {
-    elementHtmlDivision.addEventListener('click', (event) => {
-        written('/');
-    });
-}
-if (elementHtmlMultiplication) {
-    elementHtmlMultiplication.addEventListener('click', (event) => {
-        written('*');
-    });
-}
 if (elementHtmlClear) {
     elementHtmlClear.addEventListener('click', (event) => {
         written(elementHtmlResult.value = '');
     });
 }
-const number1 = elementHtmlResult.value;
-const number2 = elementHtmlResult.value;
-const userInput = '0';
+for (let i = 0; i < elementHtmlOperation.length; i++) {
+    elementHtmlOperation[i].addEventListener('click', function () {
+        currentOperator = this.innerHTML;
+        numberOne = parseInt(elementHtmlResult.value);
+        elementHtmlResult.value = '';
+    });
+}
 if (elementHtmlEqual) {
     elementHtmlEqual.addEventListener('click', (event) => {
+        numberTwo = parseInt(elementHtmlResult.value);
+        elementHtmlResult.value = '';
         switch (currentOperator) {
             case '+':
-                elementHtmlResult.value = number1 + number2;
+                elementHtmlResult.value = (numberOne + numberTwo).toString();
+                console.log(currentOperator);
                 break;
             case '-':
+                elementHtmlResult.value = (numberOne - numberTwo).toString();
+                console.log(currentOperator);
                 break;
             case '*':
+                elementHtmlResult.value = (numberOne * numberTwo).toString();
+                console.log(currentOperator);
                 break;
             case '/':
+                elementHtmlResult.value = (numberOne / numberTwo).toString();
+                console.log(currentOperator);
                 break;
+            default:
+                alert('Erreur');
         }
     });
 }

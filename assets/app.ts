@@ -1,5 +1,4 @@
 import './styles/style.scss';
-import * as events from "events";
 
 const elementHtmlResult: HTMLInputElement = document.getElementById('champ') as HTMLInputElement;
 const elementHtmlZero: HTMLParagraphElement = document.getElementById('zero') as HTMLParagraphElement;
@@ -13,14 +12,13 @@ const elementHtmlSeven: HTMLParagraphElement = document.getElementById('seven') 
 const elementHtmlEight: HTMLParagraphElement = document.getElementById('eight') as HTMLParagraphElement;
 const elementHtmlNine: HTMLParagraphElement = document.getElementById('nine') as HTMLParagraphElement;
 
-const elementHtmlAddition: HTMLParagraphElement = document.getElementById('addition') as HTMLParagraphElement;
-const elementHtmlSubtraction: HTMLParagraphElement = document.getElementById('subtraction') as HTMLParagraphElement;
-const elementHtmlMultiplication: HTMLParagraphElement = document.getElementById('multiplication') as HTMLParagraphElement;
-const elementHtmlDivision: HTMLParagraphElement = document.getElementById('division') as HTMLParagraphElement;
 const elementHtmlClear: HTMLParagraphElement = document.getElementById('clear') as HTMLParagraphElement;
 const elementHtmlEqual: HTMLParagraphElement = document.getElementById('equal') as HTMLParagraphElement;
+const elementHtmlOperation : HTMLCollectionOf<HTMLDivElement> = document.getElementsByClassName('button-operation') as HTMLCollectionOf<HTMLDivElement>;
 
 let currentOperator = '=';
+let numberOne: number;
+let numberTwo : number;
 
 function written(number: string) {
     elementHtmlResult.value += number;
@@ -86,57 +84,44 @@ if (elementHtmlNine) {
     });
 }
 
-if (elementHtmlAddition) {
-    elementHtmlAddition.addEventListener('click', (event: MouseEvent) => {
-        written('+');
-    });
-}
-
-if (elementHtmlSubtraction) {
-    elementHtmlSubtraction.addEventListener('click', (event: MouseEvent) => {
-        written('-');
-    });
-}
-
-if (elementHtmlDivision) {
-    elementHtmlDivision.addEventListener('click', (event: MouseEvent) => {
-        written('/');
-    });
-}
-
-if (elementHtmlMultiplication) {
-    elementHtmlMultiplication.addEventListener('click', (event: MouseEvent) => {
-        written('*');
-    });
-}
-
 if (elementHtmlClear) {
     elementHtmlClear.addEventListener('click', (event: MouseEvent) => {
         written(elementHtmlResult.value = '');
     });
 }
 
-const number1 = elementHtmlResult.value;
-const number2 = elementHtmlResult.value;
-const userInput= '0';
 
+for (let i = 0; i < elementHtmlOperation.length; i++) {
+    elementHtmlOperation[i].addEventListener('click', function() {
+        currentOperator = this.innerHTML;
+        numberOne = parseInt(elementHtmlResult.value);
+        elementHtmlResult.value = '';
+    });
+}
 
 if (elementHtmlEqual) {
     elementHtmlEqual.addEventListener('click', (event: MouseEvent) => {
-
+        numberTwo = parseInt(elementHtmlResult.value);
+        elementHtmlResult.value = '';
         switch (currentOperator) {
             case '+' :
-                    elementHtmlResult.value = number1 + number2;
+                elementHtmlResult.value = (numberOne + numberTwo).toString();
+                console.log(currentOperator);
                 break;
             case '-':
-
+                elementHtmlResult.value = (numberOne - numberTwo).toString();
+                console.log(currentOperator);
                 break;
             case '*' :
-
+                elementHtmlResult.value = (numberOne * numberTwo).toString();
+                console.log(currentOperator);
                 break;
             case '/' :
-
+                elementHtmlResult.value = (numberOne / numberTwo).toString();
+                console.log(currentOperator);
                 break;
+            default :
+                alert('Erreur');
         }
     });
 }
